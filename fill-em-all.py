@@ -6,7 +6,7 @@ with open('calc.obj', 'rb') as f:
 print("Successfully read calc.obj")
 
 code = ''
-for i in range(0, len(contents) - 2, 2):
+for i in range(0, len(contents), 2):
     hexstr = "x{:02x}{:02x}".format(contents[i], contents[i + 1])
     assert len(hexstr) == 5
     code += '.FILL ' + hexstr + '\n'
